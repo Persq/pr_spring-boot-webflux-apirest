@@ -1,0 +1,6 @@
+
+$ cd C:\Capacitacion_Java_Spring\spring-boot-webflux-apirest
+For Maven Global
+$ mvn test
+For Maven Embedded
+$ mvnw test

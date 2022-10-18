@@ -4,6 +4,8 @@ import org.springframework.data.mongodb.repository.ReactiveMongoRepository;
 
 import com.persq.springboot.webflux.app.models.documents.Categoria;
 
-public interface CategoriaDao extends ReactiveMongoRepository<Categoria, String>{
+import reactor.core.publisher.Mono;
 
+public interface CategoriaDao extends ReactiveMongoRepository<Categoria, String>{
+	public Mono<Categoria> findByNombre(String nombre);
 }
