@@ -1,0 +1,436 @@
+{
+	"info": {
+		"_postman_id": "07160f0c-56a7-43d5-a20d-15dfabc0a6c1",
+		"name": "Prog_Reactiva_SpringBoot_SpringWebFlux",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10281276"
+	},
+	"item": [
+		{
+			"name": "Restful RestController",
+			"item": [
+				{
+					"name": "List Product",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/productos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"productos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Product",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/productos/634df46cac0cc804ed158264",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"productos",
+								"634df46cac0cc804ed158264"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Product",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n    \"nombre\": \"Sony Persq\",\r\n    \"precio\": 347.00, \r\n    \"categoria\": {\r\n        \"id\": \"634df46cac0cc804ed15825f\",\r\n        \"nombre\": \"Electrónico\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/productos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"productos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Product",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Sony Persq V2\",\r\n    \"precio\": 100.0,\r\n    \"categoria\": {\r\n        \"id\": \"634df46cac0cc804ed15825f\",\r\n        \"nombre\": \"Electrónico\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/productos/634df664ac0cc804ed15826c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"productos",
+								"634df664ac0cc804ed15826c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Mono Update Product",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/bknig/OneDrive/Desktop/017.PNG"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/productos/upload/634df7e8ac0cc804ed15826d",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"productos",
+								"upload",
+								"634df7e8ac0cc804ed15826d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Mono Update Product V2",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/bknig/OneDrive/Desktop/1658855113166.jpg"
+								},
+								{
+									"key": "nombre",
+									"value": "bike",
+									"type": "text"
+								},
+								{
+									"key": "precio",
+									"value": "1400",
+									"type": "text"
+								},
+								{
+									"key": "categoria.id",
+									"value": "634df46cac0cc804ed158262",
+									"type": "text"
+								},
+								{
+									"key": "categoria.nombre",
+									"value": "Muebles",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/productos/upload/634df7e8ac0cc804ed15826d",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"productos",
+								"upload",
+								"634df7e8ac0cc804ed15826d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Product",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/productos/634df664ac0cc804ed15826c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"productos",
+								"634df664ac0cc804ed15826c"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Restful Functions Endpoints",
+			"item": [
+				{
+					"name": "List Product",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v2/productos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v2",
+								"productos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Product",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v2/productos/634ef96d9a872557302c72be",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v2",
+								"productos",
+								"634ef96d9a872557302c72be"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Product",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n    \"nombre\": \"Sony Persq\",\r\n    \"precio\": 347.00, \r\n    \"categoria\": {\r\n        \"id\": \"634df46cac0cc804ed15825f\",\r\n        \"nombre\": \"Electrónico\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v2/productos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v2",
+								"productos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Product",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Sony Persq V2\",\r\n    \"precio\": 100.0,\r\n    \"categoria\": {\r\n        \"id\": \"634df46cac0cc804ed15825f\",\r\n        \"nombre\": \"Electrónico\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v2/productos/634ef96d9a872557302c72be",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v2",
+								"productos",
+								"634ef96d9a872557302c72be"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Mono Update Product",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/bknig/OneDrive/Desktop/1658855113166.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v2/productos/upload/634ef96d9a872557302c72be",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v2",
+								"productos",
+								"upload",
+								"634ef96d9a872557302c72be"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Mono Update Product V2",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/bknig/OneDrive/Desktop/1658855113166.jpg"
+								},
+								{
+									"key": "nombre",
+									"value": "bike",
+									"type": "text"
+								},
+								{
+									"key": "precio",
+									"value": "1400",
+									"type": "text"
+								},
+								{
+									"key": "categoria.id",
+									"value": "634df46cac0cc804ed158262",
+									"type": "text"
+								},
+								{
+									"key": "categoria.nombre",
+									"value": "Muebles",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v2/productos/upload/634ef96d9a872557302c72be",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v2",
+								"productos",
+								"upload",
+								"634ef96d9a872557302c72be"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Product",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/productos/634ef9449a872557302c72bd",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"productos",
+								"634ef9449a872557302c72bd"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
